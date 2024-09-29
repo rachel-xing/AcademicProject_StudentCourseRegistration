@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tpFeOJIzgGM=",
+  "success": true,
+  "projectFilePath": "/Users/rachel/RiderProjects/Lab2/Lab2/Lab2.csproj",
+  "expectedPackageFiles": [
+    "/Users/rachel/.nuget/packages/academicmanagement/2.0.0/academicmanagement.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

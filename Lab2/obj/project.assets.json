@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "AcademicManagement/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/AcademicManagement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/AcademicManagement.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AcademicManagement/2.0.0": {
+      "sha512": "Ak1QB6G7HC9dWI8qwUnNoXT06fgc3BK7Khh8/7+OoO692EqFRjR+VbCq806AL4oSwMdVtUg4uSVAS1NGz4bBSg==",
+      "type": "package",
+      "path": "academicmanagement/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "academicmanagement.2.0.0.nupkg.sha512",
+        "academicmanagement.nuspec",
+        "lib/net5.0/AcademicManagement.dll",
+        "lib/net5.0/AcademicManagement.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "AcademicManagement >= 2.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/rachel/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/rachel/RiderProjects/Lab2/Lab2/Lab2.csproj",
+      "projectName": "Lab2",
+      "projectPath": "/Users/rachel/RiderProjects/Lab2/Lab2/Lab2.csproj",
+      "packagesPath": "/Users/rachel/.nuget/packages/",
+      "outputPath": "/Users/rachel/RiderProjects/Lab2/Lab2/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/rachel/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "/Users/rachel/LocalClassLib": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "AcademicManagement": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

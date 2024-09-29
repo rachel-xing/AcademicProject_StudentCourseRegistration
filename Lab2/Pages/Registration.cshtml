@@ -1,0 +1,78 @@
+@page
+@model Lab2.Pages.Registration
+
+@{
+    ViewData["Title"] = "Registration";
+}
+<h2>Registration</h2>
+
+
+<form method="post" asp-page-handler="StudentSelected">
+    <select class="form-select m-3" asp-for="@Model.SelectedStudentName">
+        <option selected>Choose a student</option>
+
+        @foreach (var student in @Model.AllStudents)
+        {
+            <option value="@student.StudentName">@student.StudentName</option>
+        }
+
+    </select>
+    <button class="btn btn-primary m-3">Get Registrations</button>
+    <p class="bg-info-subtle">@Model.Message</p>
+</form>
+
+@if (!@Model.IsExisted && @Model.SelectedStudent != null)
+{
+    <form method="post" asp-page-handler="Register">
+        <input type="hidden" asp-for="SelectedStudentName" />
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course tile</th>
+                <th>Check to Register</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var course in @Model.Courses)
+            {
+                <tr>
+                    <td>@course.CourseCode</td>
+                    <td>@course.CourseTitle</td>
+                    <td>
+                        <input type="checkbox" id="@course.CourseCode" name="SelectedCourseCodes" value="@course.CourseCode"/>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <button class="btn btn-primary">Register</button>
+    </form>
+}
+
+@if (@Model.IsExisted && @Model.SelectedStudent != null)
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Course Code</th>
+            <th>Course tile</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach(var record in @Model.SelectedStudentsRegistered) {
+            <tr>
+                <td>@record.CourseCode</td>
+                <td>
+                    @Model.Courses.FirstOrDefault(c => c.CourseCode == @record.CourseCode).CourseTitle
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+
+
